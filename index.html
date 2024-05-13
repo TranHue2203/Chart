@@ -446,9 +446,9 @@ anychart.onDocumentReady(function () {
     anychart.onDocumentReady(function () {
   // create data set on our data
   var dataSet = anychart.data.set([
-    ['Nội dung theo 3 chân kiềng trong phát triển DN', 200, 200, null, null, null, null, null, null, null, 200],
-    ['Phổ câp chính sách', null, null, 200, null, null, 200,null, 200, 200, null],
-    ['Nội dung yêu cầu Talkshow', null, null, null,200 , 200, null, null, null, null, null],
+    ['Nội dung theo 3 chân kiềng trong phát triển DN', 125, 135, null, null, null, null, null, null, null, 155],
+    ['Phổ câp chính sách', null, null, 145, null, null, 115,null, 125, 105, null],
+    ['Nội dung yêu cầu Talkshow', null, null, null,60 , 80, null, 90, null, null, null],
   ]);
 
   // map data for the first series, take x from the zero column and value from the first column of data set
@@ -559,7 +559,90 @@ anychart.onDocumentReady(function () {
   // set grid settings
   chart.yGrid().stroke('#DBDBDB');
   chart.xGrid().stroke('#DBDBDB');
-
+  
+  var series = chart.getSeriesAt(0);
+  series.labels()
+    .enabled(true) // Bật hiển thị nhãn
+    .fontColor('#00000')
+    .position('center') // Vị trí của nhãn trên cột
+    .format('{%Value}') // Định dạng hiển thị giá trị
+    .fontSize(12)
+    .padding([-6, 0, 0, 0]);
+ 
+    var series = chart.getSeriesAt(1);
+  series.labels()
+    .enabled(true) // Bật hiển thị nhãn
+    .fontColor('#00000')
+    .position('center') // Vị trí của nhãn trên cột
+    .format('{%Value}') // Định dạng hiển thị giá trị
+    .fontSize(12)
+    .padding([-6, 0, 0, 0]);
+    var series = chart.getSeriesAt(2);
+  series.labels()
+    .enabled(true) // Bật hiển thị nhãn
+    .fontColor('#00000')
+    .position('center') // Vị trí của nhãn trên cột
+    .format('{%Value}') // Định dạng hiển thị giá trị
+    .fontSize(12)
+    .padding([-6, 0, 0, 0]);
+    var series = chart.getSeriesAt(3);
+  series.labels()
+    .enabled(true) // Bật hiển thị nhãn
+    .fontColor('#00000')
+    .position('center') // Vị trí của nhãn trên cột
+    .format('{%Value}') // Định dạng hiển thị giá trị
+    .fontSize(12)
+    .padding([-6, 0, 0, 0]);
+    var series = chart.getSeriesAt(4);
+  series.labels()
+    .enabled(true) // Bật hiển thị nhãn
+    .fontColor('#00000')
+    .position('center') // Vị trí của nhãn trên cột
+    .format('{%Value}') // Định dạng hiển thị giá trị
+    .fontSize(12)
+    .padding([-6, 0, 0, 0]);
+    var series = chart.getSeriesAt(5);
+  series.labels()
+    .enabled(true) // Bật hiển thị nhãn
+    .fontColor('#00000')
+    .position('center') // Vị trí của nhãn trên cột
+    .format('{%Value}') // Định dạng hiển thị giá trị
+    .fontSize(12)
+    .padding([-6, 0, 0, 0]);
+    var series = chart.getSeriesAt(6);
+  series.labels()
+    .enabled(true) // Bật hiển thị nhãn
+    .fontColor('#00000')
+    .position('center') // Vị trí của nhãn trên cột
+    .format('{%Value}') // Định dạng hiển thị giá trị
+    .fontSize(12)
+    .padding([-6, 0, 0, 0]);
+    var series = chart.getSeriesAt(7);
+  series.labels()
+    .enabled(true) // Bật hiển thị nhãn
+    .fontColor('#00000')
+    .position('center') // Vị trí của nhãn trên cột
+    .format('{%Value}') // Định dạng hiển thị giá trị
+    .fontSize(12)
+    .padding([-6, 0, 0, 0]);
+    var series = chart.getSeriesAt(8);
+  series.labels()
+    .enabled(true) // Bật hiển thị nhãn
+    .fontColor('#00000')
+    .position('center') // Vị trí của nhãn trên cột
+    .format('{%Value}') // Định dạng hiển thị giá trị
+    .fontSize(12)
+    .padding([-6, 0, 0, 0]);
+    var series = chart.getSeriesAt(9);
+  series.labels()
+    .enabled(true)
+    .fontColor('#000000') // Bật hiển thị nhãn
+    .position('center') // Vị trí của nhãn trên cột
+    .format('{%Value}') // Định dạng hiển thị giá trị
+    .fontSize(12)
+    .padding([-6, 0, 0, 0]);
+ 
+    
   // set container id for the chart
   chart.container('container-3D-chart');
 
