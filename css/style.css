@@ -281,7 +281,7 @@
     display: flex;
     padding-left: 20px;
 }
-
+/* Mountain-chart */
 .mountain-chart {
     margin: 16px;
     width: 426px;
@@ -291,7 +291,7 @@
     border-radius: 12px;   
 }
 .mountain-chart #container-mountain-chart{
-    height: 470px;
+    height: 430px;
     margin-top: 16px;
 }
 .mountain-chart h3 {
@@ -302,4 +302,51 @@
     padding-bottom: 31px;
     margin-bottom: 0;
     padding-top: 18px;
+}
+
+.column-chart {
+    margin: 16px;
+    width: 426px;
+    height: 540px;
+    position: relative;
+    border: 1px solid #E5E6EB;
+    border-radius: 12px;   
+}
+.column-chart #container-column-chart{
+    height: 400px;
+    margin-top: 16px;
+}
+.column-chart h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #464E5F;
+    text-align: center;
+    padding-bottom: 31px;
+    margin-bottom: 0;
+    padding-top: 18px;
+}
+.column-chart #container-column-chart .list-note .item {
+    display: flex;
+    align-items: center;
+    padding-bottom: 12px;
+}
+.column-chart #container-column-chart .list-note .item .color-item {
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+}
+.column-chart #container-column-chart .list-note .item p {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    color: #7A8086;
+    margin-left: 16px;
+}
+.column-chart #container-column-chart .list-note{
+    padding: 0;
+    bottom: 0;
+    z-index: 9;
+    position: absolute;
+    padding-left: 20px;
 }

@@ -16,7 +16,7 @@
   <link href="css/anychart-ui.min.css" rel="stylesheet" type="text/css">
   <link href="css/anychart-font.min.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="css/style.css">
-  <style>html, body, #container-donut-chart, #container-pie-chart,#container-bar-chart,#container-line-bar-chart, #container-3D-chart,#container-mountain-chart {
+  <style>html, body, #container-donut-chart, #container-pie-chart,#container-bar-chart,#container-line-bar-chart, #container-3D-chart,#container-mountain-chart,#container-column-chart {
     width: 100%;
     height: 100%;
     margin: 0;
@@ -168,7 +168,25 @@
     </div>
     <div class="mountain-chart">
       <div id="container-mountain-chart">
+        </ul>
+      </div>
+    </div>
 
+    <div class="column-chart">
+      <div id="container-column-chart">
+        <ul class="list-note">
+          <li class="item">
+            <div class="color-item" style="background-color: #034EA1;"></div>
+            <p>Tổng số lượng DN hội viên</p>
+          </li>
+          <li class="item">
+            <div class="color-item" style="background-color: #FC9A03;"></div>
+            <p>Doanh nghiệp hội viên đã active</p>
+          </li>
+          <li class="item">
+            <div class="color-item" style="background-color: #787D88;"></div>
+            <p>Doanh nghiệp hội viên mới tham gia thông qua dự án</p>
+          </li>
       </div>
     </div>
   </div>
@@ -729,6 +747,59 @@ anychart.onDocumentReady(function () {
 
   // set container id for the chart
   chart.container('container-mountain-chart');
+
+  // initiate chart drawing
+  chart.draw();
+});
+anychart.onDocumentReady(function () {
+  // create data set on our data
+  
+let dataset = [
+      {x: "", value: null, fill: "#034EA1"},
+      {x: "Tổng số lượng DN hội viên", value: 800, fill: "#034EA1"},
+      {x: "Doanh nghiệp hội viên đã active", value: 550 ,fill: "#FC9A03"},
+      {x: "Doanh nghiệp hội viên mới tham gia thông qua dự án", value: 100 ,fill: "#787D88"},
+    ];
+    
+  // create column chart
+  var chart = anychart.column3d();
+
+  // set chart data
+  chart.data(dataset);
+
+  // turn on chart animation
+  chart.animation(true);
+
+  // set axes settings
+  chart.yAxis().title('');
+  chart.yAxis().labels().format('{%Value}{groupsSeparator: }');
+  chart.xAxis().labels().format('');
+  // set labels settings
+  chart
+    .labels()
+    .enabled(true)
+    .fontColor('#00000')
+    .fontWeight('bold')
+    .position('center-top')
+    .anchor('center-bottom')
+    .format('{%Value}{groupsSeparator: }');
+  chart.hovered().labels(false);
+
+  // set interactivity settings
+  chart.interactivity().hoverMode('single');
+chart.xGrid().stroke('');
+  // set tooltip settings
+  chart.title().fontColor('#464E5F').fontWeight('bold').fontSize('18').padding([10, 0, 40, 0]);
+  chart
+    .title('Báo cáo DN hội viên tham gia dự án')
+    .tooltip()
+    .positionMode('point')
+    .format('{%Value}{groupsSeparator: }');
+
+  chart.pointWidth('100%'); 
+  chart.zAspect("100%");
+  // set container id for the chart
+  chart.container('container-column-chart');
 
   // initiate chart drawing
   chart.draw();
